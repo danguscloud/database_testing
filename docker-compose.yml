@@ -1,0 +1,17 @@
+version: "1.0"
+services: 
+  node-server:
+    image: "node-server"
+    ports: 
+      - "3000:3000"
+    environment: 
+      db_password: "${db_password}"
+      db_user: "${db_user}"
+  pg-db:
+    image: "postgres-db"
+    ports: 
+      - "2233:5432"
+    environment: 
+      POSTGRES_PASSWORD: "${db_password}"
+      POSTGRES_USER: "${db_user}"
+      POSTGRES_DB: "postgres"
