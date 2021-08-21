@@ -9,6 +9,7 @@ const app = express()
 const port = 3000
 
 app.get('/getNumbers', (req, res, next) => {
+  // testing
   let timestamp = clock();
   console.log('performance', timestamp);
   getAllNumbers()
